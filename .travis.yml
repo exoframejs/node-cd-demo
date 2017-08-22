@@ -3,3 +3,14 @@ language: node_js
 node_js: node
 
 cache: yarn
+
+before_install:
+  - npm install -g exoframe
+  - exoframe endpoint http://exoframe.codezen.net
+
+after_success:
+  - exoframe -u -t $EXO_TOKEN
+
+env:
+  global:
+    secure: u0BlUCxm++mxINmgCG7JouTqIZtZ0Z9pGTcscvR3VcSGE7AmMG0nj9KvQUeiGQ0lS/tghPIkVySWfEZNTAbZ275IVUSo5yN7fjlTDaqjVM/mPlctA+LHF/gtNMRP1KQjSvrnoaAwS/5QuwJnfaIlQIUVFIDgrqM0cNmJAVjbO28RHWCACNlbvBgcweGv+0FVFkzV9ExTppwYnhk+YMnjXAwkX3bbjavxpoai2KqOUebTdILHTmEVYPrkdfo+owxX5PSu0zNi5mh1r1wGAsQD2Ems+SHLma0BpABUqTUly8XxPekCRiFZx2AIQ6Xx+O6i41pVZD/JgzOnzyMi+6t8fWaJY5LR9VxLAkUd1BomAPpC1hcrQ2Gq0H8YSA3slHDAffFt0wq/6Xrqr12iwRYaKIZLz+arHE55E+XbuZbp8MMbCpeh9fiU69BytpH6Nfeln5UdvypDrIoLg2eRsYPRm2EDhRcLIxreMDz2//uV1i7ILVaQXks2ggZJtz0uZui5ecYKfPTPXjn8mBoVxBUygbYMs7Om5LPEClj5j1T4IOHHvcCa1eFzKXHxrOut33xcgUuCE72lzLI2RnM7BzqRzC57z8DHbqSTy5wS7nMtNaLTgdwUk88mJtidf9YmfkBsbQTDwAWkCt40BVum5QX9Jconf019jbNetMCa1yct3gA=
