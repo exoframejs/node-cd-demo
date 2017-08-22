@@ -1,0 +1,6 @@
+{
+  "name": "exoframe-node-cd-demo",
+  "restart": "on-failure:2",
+  "domain": "exoframe-cd-demo.codezen.net",
+  "project": "exoframe-node-cd-demo"
+}
